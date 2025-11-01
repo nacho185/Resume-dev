@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Ignacio Aguirre</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="row">
+      <div class="brand">
+        <span class="dot"></span>
+        <strong>Ignacio Aguirre</strong>
+        <span class="muted">Resume Viewer</span>
+      </div>
+
+      <nav class="actions">
+        <select id="picker" aria-label="Choose resume">
+          <option value="./documents/%28C%29%20IgnacioAguirre%20Dev.pdf" selected>Software / Dev</option>
+          <option value="./documents/%28C%29Ignacio%20Aguirre.pdf">QA / Machining</option>
+        </select>
+        <a id="openBtn" class="btn" href="./documents/%28C%29%20IgnacioAguirre%20Dev.pdf" target="_blank" rel="noopener">Open PDF</a>
+        <a id="dlBtn" class="btn solid" href="./documents/%28C%29%20IgnacioAguirre%20Dev.pdf" download>Download</a>
+        <a class="btn ghost" href="https://ignacioaguirre.net/">Back</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="stage">
+    <!-- FULL-SCREEN viewer -->
+    <object id="pdf" class="pdf"
+            data="./documents/%28C%29%20IgnacioAguirre%20Dev.pdf#toolbar=1&navpanes=0&zoom=page-width"
+            type="application/pdf">
+      <p>Your browser can’t display the PDF.
+        <a id="fallbackLink" href="./documents/%28C%29%20IgnacioAguirre%20Dev.pdf" target="_blank" rel="noopener">Open it here</a>.
+      </p>
+    </object>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="y"></span> Ignacio Aguirre • <a href="https://github.com/nacho185" target="_blank" rel="noopener">GitHub</a></small>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
